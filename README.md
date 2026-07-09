@@ -9,7 +9,7 @@
 
 ## 🚀 在线体验
 
-> 部署到 Streamlit Cloud 后可在此处放链接：`https://xxx.streamlit.app`
+> 🌐 **在线体验**：https://wyzlyno1-logistics-calculator-python.streamlit.app
 
 本地运行：
 ```bash
