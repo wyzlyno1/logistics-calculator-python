@@ -1,5 +1,20 @@
-"""经济订货批量 (EOQ) 模块"""
-import streamlit as st
+"""
+经济订货批量 (EOQ) 模块
+========================
+EOQ 是库存管理的核心模型，回答"每次订多少货最划算"这个问题。
+
+核心公式：Q* = √(2DS/H)
+- D = 年需求量
+- S = 每次订货成本（元/次）
+- H = 单位年持有成本（元/件·年）
+
+三个子模型：
+1. 基本 EOQ — 需求确定、不允许缺货、瞬时到货
+2. 数量折扣 — 不同订货量对应不同单价，需要比较各层级总成本
+3. 允许缺货 — 允许暂时缺货，引入缺货成本参数 B
+
+每个子模型输出：最优订货量、年总成本、成本曲线图、逐步求解过程
+"""
 from src.utils.stats import fmt, parse_num
 from src.utils.ui import result_value, result_grid, steps_card, alert
 

@@ -1,5 +1,17 @@
-"""经济生产批量 (EPQ) 模块"""
-import streamlit as st
+"""
+经济生产批量 (EPQ) 模块
+=======================
+EPQ 解决"自己生产"而非"外购"场景下的最优批量问题。
+与 EOQ 的关键区别：货物不是一次性到货，而是边生产边消耗。
+
+核心公式：Q* = √(2DS / [H(1-d/p)])
+- p = 日生产率（件/天）
+- d = 日需求率（件/天）
+- (1-d/p) = 生产期间库存净增长速度（生产速度 - 消耗速度）/ 生产速度
+
+只有当 p > d 时才有意义（否则无法积累库存）。
+输出包含与 EOQ 的对比，说明为什么 EPQ 批量更大但最大库存更低。
+"""
 from src.utils.stats import fmt, parse_num
 from src.utils.ui import result_value, result_grid, alert
 

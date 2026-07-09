@@ -1,5 +1,15 @@
-"""安全库存计算模块"""
-import streamlit as st
+"""
+安全库存计算模块
+================
+安全库存是为了应对需求或提前期的不确定性而额外持有的库存。
+三种模型对应三种不同程度的不确定性：
+
+模型1（需求不确定）:  SS = Z × σd × √L     — 需求波动，提前期固定
+模型2（提前期不确定）: SS = Z × d̄ × σL      — 提前期波动，需求固定
+模型3（两者均不确定）: SS = Z × √(L×σd² + d̄²×σL²)  — 最接近现实
+
+Z 值由服务水平决定（如 95% → Z=1.645），Z 值越大安全库存越高，缺货概率越低。
+"""
 import math
 from src.utils.stats import fmt, get_z_value, COMMON_SERVICE_LEVELS
 from src.utils.ui import result_grid, alert

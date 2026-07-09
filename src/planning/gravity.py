@@ -1,5 +1,15 @@
-"""重心法选址模块"""
-import streamlit as st
+"""
+重心法选址模块
+==============
+求解单设施最优选址的经典方法：给定多个需求点的坐标和需求量，
+找一个位置使得总运输成本（加权距离之和）最小。
+
+算法分两步：
+1. 基本重心法：X = Σ(Wi×Xi)/ΣWi, Y = Σ(Wi×Yi)/ΣWi（加权平均）
+2. 迭代优化：用距离倒数加权反复修正坐标，直到收敛
+
+假设：运输成本与距离和运量成正比，使用欧氏距离（直线距离）。
+"""
 import pandas as pd
 import math
 from src.utils.stats import fmt, parse_num

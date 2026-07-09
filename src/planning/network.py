@@ -1,5 +1,19 @@
-"""物流网络优化 — Dijkstra, Prim, Ford-Fulkerson"""
-import streamlit as st
+"""
+物流网络优化模块
+================
+基于图论的物流网络分析，三个经典算法：
+
+1. Dijkstra 最短路径 — 找两个节点间总距离/成本最小的路线
+   应用：配送路径规划、运输路线选择
+
+2. Prim 最小生成树 — 用最小总权连接所有节点
+   应用：物流网络设计、管道/线路铺设
+
+3. Ford-Fulkerson 最大流 — 计算网络的最大通过能力
+   应用：交通流量分析、供应链瓶颈识别
+
+使用 NetworkX 做图计算，Plotly 做交互式网络图可视化。
+"""
 import pandas as pd
 import math
 import networkx as nx

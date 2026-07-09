@@ -1,5 +1,18 @@
-"""牛鞭效应演示器 — 四级供应链需求放大模拟"""
-import streamlit as st
+"""
+牛鞭效应演示模块
+================
+牛鞭效应（Bullwhip Effect）是供应链管理中的经典现象：
+需求信息从终端客户向上游传递时，波动被逐级放大。
+
+模拟四级供应链：零售商 → 批发商 → 分销商 → 制造商
+
+每级行为：
+1. 用移动平均法预测下游需求
+2. 按 Order-up-to 策略订货：订单 = max(0, 预测×(L+1) + Z×σ×√(L+1) - 库存 - 在途 + 缺货)
+3. 订货经过提前期 L 后到货
+
+输出牛鞭比 = Var(本级订单) / Var(客户需求)，>1 表示需求被放大。
+"""
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go

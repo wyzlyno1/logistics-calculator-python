@@ -1,5 +1,17 @@
-"""ABC 分类分析模块"""
-import streamlit as st
+"""
+ABC 分类分析模块
+================
+基于帕累托法则（二八定律）对库存物品分类：
+- A 类：占金额 70%，品种数少 → 重点管理
+- B 类：占金额 20% → 一般管理
+- C 类：占金额 10%，品种数多 → 简化管理
+
+计算流程：
+1. 每种物品年消耗金额 = 年需求量 × 单价
+2. 按金额降序排列
+3. 计算累计占比，按阈值分类
+4. 绘制帕累托图（柱状图 + 累计占比折线）
+"""
 import pandas as pd
 from src.utils.stats import fmt, parse_num
 from src.utils.ui import alert
