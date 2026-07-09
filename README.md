@@ -9,7 +9,7 @@
 
 ## 🚀 在线体验
 
-> 🌐 **在线体验**：https://wyzlyno1-logistics-calculator-python.streamlit.app
+> 🌐 **在线体验**：https://logistics-calculator-python-byqyyruw836newk7ah8ppy.streamlit.app
 
 本地运行：
 ```bash
