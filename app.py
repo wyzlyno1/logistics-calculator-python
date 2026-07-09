@@ -47,11 +47,8 @@ MODULES = {
 def main():
     # 侧边栏
     with st.sidebar:
-        st.image(
-            "https://raw.githubusercontent.com/wyzlyno1/logistics-calculator/main/assets/avatar.jpg"
-            if False else None,
-            width=64,
-        )
+        # 侧边栏头像（可以放自己的 GitHub 头像或其他图片链接）
+        # st.image("https://avatars.githubusercontent.com/your-username", width=64)
         st.title("物流计算工具箱")
         st.caption("by 湫 · 物流工程")
 
