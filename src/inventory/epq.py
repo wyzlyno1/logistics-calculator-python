@@ -12,6 +12,7 @@ EPQ 解决"自己生产"而非"外购"场景下的最优批量问题。
 只有当 p > d 时才有意义（否则无法积累库存）。
 输出包含与 EOQ 的对比，说明为什么 EPQ 批量更大但最大库存更低。
 """
+import streamlit as st
 from src.utils.stats import fmt, parse_num
 from src.utils.ui import result_value, result_grid, alert
 

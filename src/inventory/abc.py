@@ -12,6 +12,7 @@ ABC 分类分析模块
 3. 计算累计占比，按阈值分类
 4. 绘制帕累托图（柱状图 + 累计占比折线）
 """
+import streamlit as st
 import pandas as pd
 from src.utils.stats import fmt, parse_num
 from src.utils.ui import alert

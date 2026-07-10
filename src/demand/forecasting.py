@@ -15,6 +15,7 @@
 
 误差指标：MAD（平均绝对偏差）、MSE（均方误差）、MAPE（平均绝对百分比误差）
 """
+import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go

@@ -10,6 +10,7 @@
 
 假设：运输成本与距离和运量成正比，使用欧氏距离（直线距离）。
 """
+import streamlit as st
 import pandas as pd
 import math
 from src.utils.stats import fmt, parse_num

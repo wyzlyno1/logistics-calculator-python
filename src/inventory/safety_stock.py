@@ -11,6 +11,7 @@
 Z 值由服务水平决定（如 95% → Z=1.645），Z 值越大安全库存越高，缺货概率越低。
 """
 import math
+import streamlit as st
 from src.utils.stats import fmt, get_z_value, COMMON_SERVICE_LEVELS
 from src.utils.ui import result_grid, alert
 
